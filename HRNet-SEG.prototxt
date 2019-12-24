@@ -1,24 +1,33 @@
 name: "HRNet-w48"
 layer {
     name: "data"
-    type: "ImageData"
+    type: "ImageSegData"
     top: "data"
     top: "label"
+	top:"data_dim"
     include {
         phase: TRAIN
     }
     transform_param {
         mirror: true
         crop_size: 224
+		scale_factors:0.5
+		scale_factors:0.75
+		scale_factors:0.1
+		scale_factors:1.25
+		scale_factors:1.5
+		scale_factors:2
         mean_value: 103.94
         mean_value: 116.78
         mean_value: 123.68
 		scale:0.017
     }
     image_data_param {
-        batch_size:64
+        batch_size:8
         source: "/data/train.txt"
         root_folder: "/data"
+		shuffle:true
+		label_type:PIXEL
     }
 }
 layer {
@@ -4235,3 +4244,121 @@ layer {
     type: "ReLU"
 }
 #########################################################################################
+layer{
+	bottom:"s4_branch1_r4_e0"
+	top:"interp_upx2"
+	name:"interp_upx2"
+	type:"Interp"
+	interp_param{
+		zoom_factor:2
+		pad_beg:0
+		pad_end:0
+	}
+}
+layer{
+	bottom:"s4_branch2_r4_e0"
+	top:"interp_upx4"
+	name:"interp_upx4"
+	type:"Interp"
+	interp_param{
+		zoom_factor:4
+		pad_beg:0
+		pad_end:0
+	}
+}
+layer{
+	bottom:"s4_branch3_r4_e0"
+	top:"interp_upx8"
+	name:"interp_upx8"
+	type:"Interp"
+	interp_param{
+		zoom_factor:8
+		pad_beg:0
+		pad_end:0
+	}
+}
+layer{
+	bottom:"s4_branch0_r4_e0"
+	bottom:"interp_upx2"
+	bottom:"interp_upx4"
+	bottom:"interp_upx8"
+	top:"concat_4"
+	name:"concat_4"
+	type:"Concat"
+}
+layer {
+    bottom: "concat_4"
+    top: "conv_output_1x1"
+    name: "conv_output_1x1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 720 #15C(C=48)
+        kernel_size: 1
+        weight_filler {
+            type: "msra"
+        }
+        bias_term: false
+    }
+}
+layer {
+    bottom: "conv_output_1x1"
+    top: "conv_output_1x1_bn"
+    name: "conv_output_1x1_bn"
+    type: "CuDNNBatchNorm"
+	scale_filler{
+		type:"constant"
+		value:1
+	}
+	bias_filler{
+		type:"constant"
+		value:0
+	}
+	frozen:false
+}
+layer {
+    bottom: "conv_output_1x1_bn"
+    top: "conv_output_1x1_bn"
+    name: "conv_output_1x1_bn/relu"
+    type: "ReLU"
+}
+layer {
+    bottom: "conv_output_1x1_bn"
+    top: "conv_output_seg_1x1"
+    name: "conv_output_seg_1x1"
+    type: "Convolution"
+    convolution_param {
+        num_output: 81 #15C(C=48)
+        kernel_size: 3
+		pad:1
+        weight_filler {
+            type: "msra"
+        }
+        bias_term: false
+    }
+}
+layer{
+	bottom:"conv_output_seg_1x1"
+	top:"interp_up2input_x4"
+	name:"interp_up2input_x4"
+	type:"Interp"
+	interp_param{
+		zoom_factor:4
+		pad_beg:0
+		pad_end:0
+	}
+}
+layer{
+	name:"loss"
+	type:"SoftmaxWithLoss"
+	bottom:"interp_up2input_x4"
+	bottom:"label"
+	loss_param{
+		ignore_label:255
+	}
+	include:{phase:TRAIN}
+}
+layer{
+	bottom:"data_dim"
+	name:"slience"
+	type:"Slience"
+}
