@@ -640,7 +640,7 @@ layer {
     name: "s1_t1_branch0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
         pad: 1
         weight_filler {
@@ -672,7 +672,7 @@ layer {
     name: "s1_t1_branch1_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
         pad: 1
 		stride:2
@@ -706,7 +706,7 @@ layer {
     name: "s2_branch0_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -744,7 +744,7 @@ layer {
     name: "s2_branch0_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -792,7 +792,7 @@ layer {
     name: "s2_branch0_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -830,7 +830,7 @@ layer {
     name: "s2_branch0_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -879,7 +879,7 @@ layer {
     name: "s2_branch0_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -917,7 +917,7 @@ layer {
     name: "s2_branch0_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -965,7 +965,7 @@ layer {
     name: "s2_branch0_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1003,7 +1003,7 @@ layer {
     name: "s2_branch0_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1052,7 +1052,7 @@ layer {
     name: "s2_branch1_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1090,7 +1090,7 @@ layer {
     name: "s2_branch1_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1138,7 +1138,7 @@ layer {
     name: "s2_branch1_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1176,7 +1176,7 @@ layer {
     name: "s2_branch1_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1222,7 +1222,7 @@ layer {
     name: "s2_branch1_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1260,7 +1260,7 @@ layer {
     name: "s2_branch1_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1308,7 +1308,7 @@ layer {
     name: "s2_branch1_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1346,7 +1346,7 @@ layer {
     name: "s2_branch1_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1396,7 +1396,7 @@ layer {
     name: "s2_t1_branch0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 1
         weight_filler {
             type: "msra"
@@ -1454,7 +1454,7 @@ layer {
     name: "s2_t1_branch0_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		stride:2
 		pad:1
@@ -1503,7 +1503,7 @@ layer {
     name: "s2_t2_branch0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		stride:2
 		pad:1
@@ -1543,7 +1543,7 @@ layer {
     name: "s3_branch0_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1581,7 +1581,7 @@ layer {
     name: "s3_branch0_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1629,7 +1629,7 @@ layer {
     name: "s3_branch0_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1667,7 +1667,7 @@ layer {
     name: "s3_branch0_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1715,7 +1715,7 @@ layer {
     name: "s3_branch0_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1753,7 +1753,7 @@ layer {
     name: "s3_branch0_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1802,7 +1802,7 @@ layer {
     name: "s3_branch0_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1840,7 +1840,7 @@ layer {
     name: "s3_branch0_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1888,7 +1888,7 @@ layer {
     name: "s3_branch1_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1926,7 +1926,7 @@ layer {
     name: "s3_branch1_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -1975,7 +1975,7 @@ layer {
     name: "s3_branch1_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2013,7 +2013,7 @@ layer {
     name: "s3_branch1_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2067,7 +2067,7 @@ layer {
     name: "s3_branch1_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2105,7 +2105,7 @@ layer {
     name: "s3_branch1_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2154,7 +2154,7 @@ layer {
     name: "s3_branch1_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2192,7 +2192,7 @@ layer {
     name: "s3_branch1_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2241,7 +2241,7 @@ layer {
     name: "s3_branch2_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2279,7 +2279,7 @@ layer {
     name: "s3_branch2_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2328,7 +2328,7 @@ layer {
     name: "s3_branch2_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2366,7 +2366,7 @@ layer {
     name: "s3_branch2_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2415,7 +2415,7 @@ layer {
     name: "s3_branch2_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2451,7 +2451,7 @@ layer {
     name: "s3_branch2_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2503,7 +2503,7 @@ layer {
     name: "s3_branch2_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2539,7 +2539,7 @@ layer {
     name: "s3_branch2_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2592,7 +2592,7 @@ layer {
     name: "s3_t0_branch0_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 1
         weight_filler {
             type: "msra"
@@ -2633,7 +2633,7 @@ layer {
     name: "s3_t0_branch0_2"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 1
         weight_filler {
             type: "msra"
@@ -2691,7 +2691,7 @@ layer {
     name: "s3_t1_branch1_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2723,7 +2723,7 @@ layer {
     name: "s3_t1_branch1_2"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2783,7 +2783,7 @@ layer {
     name: "s3_t2_branch2_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2814,7 +2814,7 @@ layer {
     name: "s3_t2_branch2_0_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2846,7 +2846,7 @@ layer {
     name: "s3_t2_branch2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2895,7 +2895,7 @@ layer {
     name: "s3_t3_branch3_0"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		stride:2
 		pad:1
@@ -2933,7 +2933,7 @@ layer {
     name: "s4_branch0_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -2971,7 +2971,7 @@ layer {
     name: "s4_branch0_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3019,7 +3019,7 @@ layer {
     name: "s4_branch0_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3055,7 +3055,7 @@ layer {
     name: "s4_branch0_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3101,7 +3101,7 @@ layer {
     name: "s4_branch0_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3137,7 +3137,7 @@ layer {
     name: "s4_branch0_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3183,7 +3183,7 @@ layer {
     name: "s4_branch0_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3219,7 +3219,7 @@ layer {
     name: "s4_branch0_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 48
+        num_output: 32
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3265,7 +3265,7 @@ layer {
     name: "s4_branch1_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3301,7 +3301,7 @@ layer {
     name: "s4_branch1_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3347,7 +3347,7 @@ layer {
     name: "s4_branch1_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3383,7 +3383,7 @@ layer {
     name: "s4_branch1_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3429,7 +3429,7 @@ layer {
     name: "s4_branch1_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3465,7 +3465,7 @@ layer {
     name: "s4_branch1_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3511,7 +3511,7 @@ layer {
     name: "s4_branch1_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3547,7 +3547,7 @@ layer {
     name: "s4_branch1_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 96
+        num_output: 64
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3593,7 +3593,7 @@ layer {
     name: "s4_branch2_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3629,7 +3629,7 @@ layer {
     name: "s4_branch2_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3675,7 +3675,7 @@ layer {
     name: "s4_branch2_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3711,7 +3711,7 @@ layer {
     name: "s4_branch2_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3757,7 +3757,7 @@ layer {
     name: "s4_branch2_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3793,7 +3793,7 @@ layer {
     name: "s4_branch2_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3839,7 +3839,7 @@ layer {
     name: "s4_branch2_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3875,7 +3875,7 @@ layer {
     name: "s4_branch2_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 192
+        num_output: 128
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3921,7 +3921,7 @@ layer {
     name: "s4_branch3_r1_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -3957,7 +3957,7 @@ layer {
     name: "s4_branch3_r1_1"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4003,7 +4003,7 @@ layer {
     name: "s4_branch3_r2_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4039,7 +4039,7 @@ layer {
     name: "s4_branch3_r2_1"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4085,7 +4085,7 @@ layer {
     name: "s4_branch3_r3_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4121,7 +4121,7 @@ layer {
     name: "s4_branch3_r3_1"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4167,7 +4167,7 @@ layer {
     name: "s4_branch3_r4_0_0"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4203,7 +4203,7 @@ layer {
     name: "s4_branch3_r4_1"
     type: "Convolution"
     convolution_param {
-        num_output: 384
+        num_output: 256
         kernel_size: 3
 		pad:1
         weight_filler {
@@ -4292,7 +4292,7 @@ layer {
     name: "conv_output_1x1"
     type: "Convolution"
     convolution_param {
-        num_output: 720 #15C(C=48)
+        num_output: 480 #15C(C=48)
         kernel_size: 1
         weight_filler {
             type: "msra"
@@ -4327,7 +4327,7 @@ layer {
     name: "conv_output_seg_1x1"
     type: "Convolution"
     convolution_param {
-        num_output: 81 #15C(C=48)
+        num_output: 81 #cls
         kernel_size: 3
 		pad:1
         weight_filler {
